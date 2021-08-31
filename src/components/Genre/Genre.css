@@ -1,0 +1,13 @@
+.genre-wrapper {
+    width: 160px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

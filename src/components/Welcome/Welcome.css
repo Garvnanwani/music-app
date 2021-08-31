@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Dancing+Script&display=swap');
+.welcome-wrapper {
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.welcome-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.3rem;
+}
+
+.welcome-about {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 70%;
+}
+
+.welcome-about div:first-child {
+    margin: 0 auto;
+    padding: 3rem;
+    font-size: 3.2rem;
+    font-family: 'Bungee Inline', cursive;
+    color: white;
+    word-spacing: 1rem;
+}
+
+.welcome-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: rgba(5, 148, 156, 1);
+    right: 20px;
+    bottom: 0;
+    position: absolute;
+}
+
+.welcome-logo img {
+    max-width: 85%;
+}
+
+.welcome-vector {
+    background-image: url('musica-bg.png');
+    background-size: cover;
+    width: 100%;
+}
