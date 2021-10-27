@@ -1,20 +1,32 @@
 import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Welcome from './components/welcome/welcome.component'
+import SearchPage from './pages/search/search-page.component'
+import DisplayPage from './pages/display/display.component'
+import PlaylistPage from './pages/platlist/playlist.component'
+
 import './App.css'
-import Welcome from './components/Welcome'
-import { Genre } from './components/Welcome'
-import { BrowserRouter as Router } from 'react-router-dom'
-import genreCat from './genreCat'
-import Display from './pages/display/Display'
+import LyricsPage from './pages/lyrics/lyrics.component'
+import PlaySong from './components/playsong/playsong.component'
+import { PlayProvider } from './context/songContext'
 
 function App() {
-    return (
-        <div className="App">
-            <Router>
-                <Welcome />
-                <Display />
-            </Router>
-        </div>
-    )
+  return (
+    <div className="App">
+      <Router>
+        <PlayProvider>
+          <SearchPage />
+          <Welcome />
+          <Switch>
+            <Route exact path="/" component={DisplayPage} />
+            <Route exact path="/:key/playlist" component={PlaylistPage} />
+            <Route exact path="/:song/lyrics" component={LyricsPage} />
+          </Switch>
+          <PlaySong />
+        </PlayProvider>
+      </Router>
+    </div>
+  )
 }
 
 export default App
